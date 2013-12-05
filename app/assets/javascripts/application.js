@@ -13,3 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require bootstrap
+//= require bootstrap-editable
+//= require address
+//= require typeahead
+//= require typeaheadjs
+
+
+

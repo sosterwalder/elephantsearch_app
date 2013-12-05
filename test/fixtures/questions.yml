@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  quest: MyText
+  answer: MyText
+
+two:
+  quest: MyText
+  answer: MyText

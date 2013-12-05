@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  keyword: MyText
+  answer: MyText
+  counter: 1
+
+two:
+  keyword: MyText
+  answer: MyText
+  counter: 1
