@@ -1,18 +1,20 @@
+    <!-- #encoding: utf-8 -->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap 101 Template</title>
+    <title>Elephant Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
+    <!-- Bootstrap  http://www.w3schools.com/tags/ref_colorpicker.asp-->
+    <%= stylesheet_link_tag "application", :media => "all" %>   
+	<%= javascript_include_tag "application" %>    
+    <%= javascript_include_tag params[:controller] %> 	
 
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag params[:controller] %>
   </head>
   <body>
- <div id="wrap">
+ <div id="wrap" style="background-color:#CCFF99">
 
       <!-- Fixed navbar -->
-      <div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar navbar-default navbar-fixed-top" style="background-color:#CCFF99">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -24,42 +26,49 @@
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><%= link_to "Index", root_path  %></li>
-              <li><%= link_to "Elements", elements_path  %></li>
-              <li><%= link_to "Fragen", questions_path  %></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
+              <% if params[:controller] == 'start' %>
+              	<li id="li_index" class="active"><%= link_to "Index", root_path  %></li>
+              <% else %>
+                <li id="li_index"><%= link_to "Index", root_path  %></li>
+              <% end %>
+              <% if params[:controller] == 'elements' %>
+              	<li id="li_elements" class="active"><%= link_to "Elements", elements_path  %></li>
+              <% else %>
+              	<li id="li_elements"><%= link_to "Elemente", elements_path  %></li>              
+              <% end %>
+              <% if params[:controller] == 'questions' %>
+              	<li id="li_questions" class="active"><%= link_to "Fragen", questions_path  %></li>              
+              <% else %>
+               <li id="li_questions"><%= link_to "Fragen", questions_path  %></li>              
+              <% end %>
+              <% if params[:controller] == 'rest' %>
+				<li id="li_questions" class="active"><%= link_to "Rest", rest_index_path  %></li>              
+              <% else %>
+              	<li id="li_questions"><%= link_to "Rest", rest_index_path  %></li>
+              <% end %>                
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
 
       <!-- Begin page content -->
-      <div class="container">
+      <div class="container" style="background-color:#CCFF99">
         <div class="page-header">
         	</br>
-          <h1>Sticky footer with fixed navbar</h1>
+        	
+        	<h1>Projekt 2 Prototyp</h1>
+        	</br>
+
         </div>
             <%= yield %>
       </div>
     </div>
 
-    <div id="footer">
+    <div id="footer" style="background-color:#CCFF99">
       <div class="container">
-        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+      	<br>
+        <p class="text-muted credit">Semantische Suche f&uuml;r Kinder mit <a href="http://stanbol.apache.org/">Stanbol</a> und <a href="http://threejs.org">three.js</a>.</p>
+		<p class="text-muted credit">Von Sven Osterwalter und Mira G&uuml;nzburger</p>
       </div>
     </div>
-
-
-    
   </body>

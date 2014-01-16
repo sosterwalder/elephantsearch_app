@@ -1,0 +1,19 @@
+    <!-- #encoding: utf-8 -->
+<%= form_for([@element, @element.attributs.build]) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :attributType, "Attributtyp" %><br />
+    <%= f.text_field :attributType %>
+  </div>
+  <div class="field">
+    <%= f.label :description, "Beschreibung" %><br />
+    <%= f.text_area :description %>
+  </div>  
+  <div class="actions">
+
+    <%= f.submit "Attribut erzeugen", :class=>"btn btn-default btn-xs"%>
+  </div>
+<% end %>

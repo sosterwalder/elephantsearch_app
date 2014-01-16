@@ -10,7 +10,11 @@ gem 'sqlite3'
 #for Tabs
 gem 'tabs_on_rails'
 
-
+# Rest lib
+gem 'mime-types'
+gem 'netrc'
+gem 'rdoc'
+gem 'rest-client'
 
 # Gems used only for assets and not required
 # in production environments by default.

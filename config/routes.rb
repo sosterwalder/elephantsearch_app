@@ -1,18 +1,16 @@
 DemoRailsApp::Application.routes.draw do
+
   resources :questions
 
-  resources :elements
+  resources :elements do
+    resources :attributs
+  end
 
- resources :lexicons
  
  resources :front
   
- 
- 
+ resources :rest
 
-  resources :posts do
-    resources :comments
-  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

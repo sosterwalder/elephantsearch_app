@@ -1,10 +1,11 @@
-<h1>Listing elements</h1>
+    <!-- #encoding: utf-8 -->
+<h1>Elemente: </h1>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Element Type</th>
-    <th>Description</th>
+    <th>Beschreibung</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,13 +16,13 @@
     <td><%= element.name %></td>
     <td><%= element.elementType %></td>
     <td><%= element.description %></td>
-    <td><%= link_to 'Show', element %></td>
-    <td><%= link_to 'Edit', edit_element_path(element) %></td>
-    <td><%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Anzeigen', element %></td>
+    <td><%= link_to 'Bearbeiten', edit_element_path(element) %></td>
+    <td><%= link_to 'Löschen', element, method: :delete, data: { confirm: 'wirklich Löschen?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Element', new_element_path %>
+<%= link_to 'Neues Element', new_element_path %>

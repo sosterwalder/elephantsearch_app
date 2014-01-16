@@ -44,7 +44,7 @@ class ElementsController < ApplicationController
 
     respond_to do |format|
       if @element.save
-        format.html { redirect_to @element, notice: 'Element was successfully created.' }
+        format.html { redirect_to @element, notice: 'Element erfolgreich hinzugefuegt.' }
         format.json { render json: @element, status: :created, location: @element }
       else
         format.html { render action: "new" }
@@ -72,6 +72,7 @@ class ElementsController < ApplicationController
   # DELETE /elements/1
   # DELETE /elements/1.json
   def destroy
+    logger.debug('destroy in elementController')
     @element = Element.find(params[:id])
     @element.destroy
 

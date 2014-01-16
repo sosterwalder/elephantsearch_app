@@ -1,0 +1,17 @@
+    <!-- #encoding: utf-8 -->
+
+<%= form_tag("/rest", :method => "post") do %>
+  <%= label_tag(:id, "ID") %>
+  <br>    
+  <%= text_field_tag(:id) %>
+  <br>  
+  <%= label_tag(:name, "Name") %>
+  <br>    
+  <%= text_field_tag(:name) %>
+  <br>  
+  <%= label_tag(:price, "Preis") %>
+  <br>    
+  <%= text_field_tag(:price) %>
+  <br>  
+  <%= submit_tag("Neu") %>
+<% end %>

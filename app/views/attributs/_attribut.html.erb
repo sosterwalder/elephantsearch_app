@@ -1,0 +1,19 @@
+    <!-- #encoding: utf-8 -->
+<p>
+  <b>Attribut Name</b>
+  <%= attribut.name %>
+</p>
+ 
+<p>
+  <b>Attribut Typ</b>
+  <%= attribut.attributType %>
+</p>
+<p>
+  <b>Beschreibung </b>
+  <%= attribut.description %>
+</p>
+<p>
+ <%= button_to 'Attribut Löschen', [attribut.element, attribut], 
+               :confirm => 'wirklich Löschen?',
+               :method => :delete, :class=>"btn btn-danger btn-xs" %>
+</p>  

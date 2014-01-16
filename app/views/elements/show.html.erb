@@ -1,20 +1,27 @@
+    <!-- #encoding: utf-8 -->
 <p id="notice"><%= notice %></p>
-
+<h2>Element </h2>
 <p>
   <b>Name:</b>
   <%= @element.name %>
 </p>
 
 <p>
-  <b>Type:</b>
+  <b>Typ:</b>
   <%= @element.elementType %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Beschreibung: </b>
   <%= @element.description %>
 </p>
 
+<h2>Attribute</h2>
+<%= render @element.attributs %>
 
-<%= link_to 'Edit', edit_element_path(@element) %> |
-<%= link_to 'Back', elements_path %>
+
+<h2>Attribut hinzufuegen:</h2>
+<%= render "attributs/form" %>
+
+<%= link_to 'Element Bearbeiten', edit_element_path(@element) %> |
+<%= link_to 'Zurück zur Elementliste', elements_path %>

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131121163915) do
+ActiveRecord::Schema.define(:version => 20131227140147) do
+
+  create_table "attributs", :force => true do |t|
+    t.string   "name"
+    t.string   "attributType"
+    t.text     "description"
+    t.integer  "element_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "attributs", ["element_id"], :name => "index_attributs_on_element_id"
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -52,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20131121163915) do
     t.text     "answer"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text     "comment"
   end
 
   create_table "tags", :force => true do |t|

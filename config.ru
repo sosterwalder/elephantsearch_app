@@ -2,3 +2,5 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run DemoRailsApp::Application
+
+Encoding.default_external = "UTF-8"
